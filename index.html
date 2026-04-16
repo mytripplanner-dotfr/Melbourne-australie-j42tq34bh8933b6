@@ -1,0 +1,535 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escapade relaxante à Melbourne et ses environs </title>
+    <link rel="icon" type="image/png" href="https://api.mytripplanner.fr/api/files/pbc_1321337024/47976eld0rscwbc/favicon_ytvg76obie.svg?thumb=100x100&token=" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      template: {
+                          sable: '#FFEDD5', 
+                          ocre: '#F97316',   // Orange Vibrant (Brand Accent)
+                          roche: '#0F172A',  // Bleu Nuit (Brand Dark)
+                          ciel: '#0D9488',   // Vert Lagon (Brand Primary)
+                          bg: '#FFF7ED'      // C'est un blanc cassé chaud, parfait pour la lecture et le contraste.
+                      }
+                  },
+                  fontFamily: {
+                      sans: ['"Plus Jakarta Sans"', 'sans-serif'], // Nouvelle police corps
+                      serif: ['"Outfit"', 'sans-serif'],           // Nouvelle police titres
+                  }
+              }
+          }
+      }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* 2. FORÇAGE DES GRAISSES (Comme sur la Landing Page) */
+        .font-sans { font-weight: 600 !important; }
+        .font-serif { font-weight: 800 !important; }
+
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #F97316; /* ocre */
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+    
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">MyTrip<span class="text-template-ocre">Planner</span></a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Arrivée et premières impressions de Melbourne</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 Nature urbaine et trésors artistiques</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Marché vibrant et brise marine à St Kilda</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 Évasion gourmande dans la Yarra Valley</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Détente aux sources chaudes de Mornington Peninsula</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Début de la Great Ocean Road : Plages et forêts</a>
+            
+                <a href="#jour-7" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J7 Les icônes de la Great Ocean Road et retour</a>
+            
+                <a href="#jour-8" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J8 Journée relaxante et quartiers branchés de Melbourne</a>
+            
+                <a href="#jour-9" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J9 Rencontre avec la faune de Phillip Island</a>
+            
+                <a href="#jour-10" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J10 Arcades historiques et musées captivants</a>
+            
+                <a href="#jour-11" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J11 Derniers instants et départ de Melbourne</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://raw.githubusercontent.com/mytripplanner-dotfr/Melbourne-australie-j42tq34bh8933b6/main/header.png" || 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021'}');">
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.2em] mb-4 uppercase text-xs font-bold">Feuille de Route</p>
+            <h1 class="font-serif text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">MELBOURNE- AUSTRALIE</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-medium max-w-2xl mx-auto leading-relaxed">Escapade relaxante à Melbourne et ses environs</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🗓️ Du 18 au 29 Avril 2026</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">💰 Environ 3000 €/personne</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🛬 1h31 (depuis Sydney, Australie)</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-16 relative">
+      <div class="text-center mb-16">
+            <h2 class="text-template-ocre font-bold tracking-normal text-4xl mt-2 uppercase font-serif">Votre Roadtrip</h2>
+      </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée et premières impressions de Melbourne</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Bienvenue à Melbourne ! Après votre vol depuis Sydney, installez-vous confortablement et imprégnez-vous de l'ambiance vibrante de la ville. Une balade le long de la Yarra River et autour de Federation Square est parfaite pour une première approche en douceur.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🛬 Arrivée à Melbourne</strong>: Atterrissage à l'aéroport de Melbourne (MEL) et transfert vers votre hébergement au cœur de la ville.</li><li><strong>🛏️ Installation à l'hôtel</strong>: Check-in et détente après le voyage. Prenez le temps de vous rafraîchir et de vous préparer pour explorer.</li><li><strong>🚶‍♂️ Balade à Federation Square et Southbank</strong>: Découvrez l'architecture moderne de Federation Square et flânez le long de la promenade de Southbank, avec ses restaurants et vues sur la rivière Yarra.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Melbourne-australie-j42tq34bh8933b6/main/jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">ℹ️ Transports</p>
+                                <p class="text-gray-700">Le "SkyBus" est une option pratique et rapide pour rejoindre le centre-ville depuis l'aéroport de Melbourne.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Nature urbaine et trésors artistiques</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Plongez dans la verdure luxuriante des jardins botaniques, puis laissez-vous émerveiller par les collections d'art de la National Gallery of Victoria. Terminez la journée en explorant les célèbres ruelles cachées de Melbourne.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🌿 Royal Botanic Gardens Victoria</strong>: Profitez d'une promenade paisible dans ces magnifiques jardins, un havre de paix au cœur de la ville.</li><li><strong>🎨 National Gallery of Victoria (NGV)</strong>: Explorez les vastes collections d'art australien et international dans le plus ancien musée d'art public d'Australie.</li><li><strong>🚶‍♀️ Exploration des "Laneways"</strong>: Perdez-vous dans les célèbres ruelles de Melbourne, ornées de street art, de cafés cachés et de boutiques uniques.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Melbourne-australie-j42tq34bh8933b6/main/jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">☕ Pause Café</p>
+                                <p class="text-gray-700">Melbourne est réputée pour sa culture du café. N'hésitez pas à vous arrêter dans l'un des nombreux cafés des laneways pour une expérience authentique.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Marché vibrant et brise marine à St Kilda</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Débutez votre journée par l'effervescence du Queen Victoria Market, où saveurs et découvertes vous attendent. L'après-midi, cap sur la plage de St Kilda pour une ambiance balnéaire relaxante et une vue imprenable sur la baie.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🛒 Queen Victoria Market</strong>: Imprégnez-vous de l'ambiance de ce marché historique, le plus grand de l'hémisphère sud, et dégustez des produits locaux.</li><li><strong>🏖️ Détente à St Kilda Beach</strong>: Profitez du soleil sur la plage, promenez-vous le long de la jetée et admirez les vues sur la ville.</li><li><strong>🎡 Luna Park Melbourne</strong>: Amusez-vous devant la façade emblématique de ce parc d'attractions historique, ou osez quelques manèges pour les plus aventureux.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Melbourne-australie-j42tq34bh8933b6/main/jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🐧 Petits pingouins</p>
+                                <p class="text-gray-700">Au coucher du soleil, il est parfois possible d'apercevoir de petits pingouins revenir à terre sous la jetée de St Kilda. Soyez patient et discret !</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Évasion gourmande dans la Yarra Valley</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Laissez la ville derrière vous pour une journée de détente et de délices dans la pittoresque Yarra Valley. Cette région viticole réputée offre des paysages vallonnés, des dégustations de vins raffinés et des produits locaux savoureux.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚗 Route panoramique vers la Yarra Valley</strong>: Profitez des paysages verdoyants en direction de cette célèbre région viticole, à environ une heure de Melbourne.</li><li><strong>🍷 Dégustation de vins dans un domaine</strong>: Visitez un vignoble comme Domaine Chandon ou De Bortoli pour une dégustation de vins locaux dans un cadre magnifique.</li><li><strong>🧀 Visite d'une fromagerie locale</strong>: Découvrez les saveurs régionales en visitant une fromagerie ou une chocolaterie, pour une pause gourmande.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Melbourne-australie-j42tq34bh8933b6/main/jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Conseil</p>
+                                <p class="text-gray-700">Pensez à désigner un conducteur sobre ou à opter pour une visite guidée avec transport inclus pour profiter pleinement des dégustations.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Détente aux sources chaudes de Mornington Peninsula</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, place à la relaxation ultime ! Dirigez-vous vers la magnifique Mornington Peninsula pour une journée dédiée au bien-être. Les célèbres Peninsula Hot Springs vous offriront une expérience de détente inoubliable au milieu de paysages naturels.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚗 Route vers Mornington Peninsula</strong>: Profitez d'une belle route côtière vers cette péninsule réputée pour ses plages et ses sources thermales.</li><li><strong>♨️ Bains aux Peninsula Hot Springs</strong>: Plongez dans les piscines géothermiques naturelles, offrant une relaxation profonde et des vues panoramiques.</li><li><strong>🚶‍♂️ Balade côtière à Sorrento ou Portsea</strong>: Explorez les charmantes villes côtières de la péninsule, avec leurs boutiques et leurs plages paisibles.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Melbourne-australie-j42tq34bh8933b6/main/jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🧖‍♀️ Préparation</p>
+                                <p class="text-gray-700">Pensez à réserver vos créneaux aux Peninsula Hot Springs à l'avance, surtout si vous voyagez pendant les week-ends ou les vacances.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Début de la Great Ocean Road : Plages et forêts</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Embarquez pour l'une des routes côtières les plus spectaculaires du monde, la Great Ocean Road. Aujourd'hui, vous découvrirez les premières merveilles : des plages de surf emblématiques aux charmantes villes côtières, en passant par des forêts d'eucalyptus apaisantes. Nuit à Apollo Bay.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚗 Départ pour la Great Ocean Road</strong>: Commencez votre périple le long de cette route légendaire, en faisant des arrêts à Torquay et Bells Beach.</li><li><strong>🚶‍♂️ Balade à Lorne</strong>: Profitez d'une pause dans la jolie ville de Lorne, avec sa plage et ses cafés. Possibilité d'une courte marche vers les Erskine Falls.</li><li><strong>🌲 Forêts d'eucalyptus et arrivée à Apollo Bay</strong>: Traversez des sections de forêt luxuriante avant d'atteindre Apollo Bay, où vous passerez la nuit.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Melbourne-australie-j42tq34bh8933b6/main/jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🐨 Faune</p>
+                                <p class="text-gray-700">Gardez l'œil ouvert le long de la route, surtout dans les zones boisées, vous pourriez apercevoir des koalas dans les eucalyptus !</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-7" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 7</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Les icônes de la Great Ocean Road et retour</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Poursuivez votre exploration de la Great Ocean Road pour admirer ses formations rocheuses emblématiques, dont les majestueux Douze Apôtres. Après avoir capturé des souvenirs inoubliables, reprenez la route vers Melbourne pour une soirée plus calme.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🗿 Les Douze Apôtres</strong>: Admirez ces piliers de calcaire spectaculaires émergeant de l'océan, un site incontournable de la Great Ocean Road.</li><li><strong>🚶‍♀️ Loch Ard Gorge et Gibson Steps</strong>: Explorez les plages et les falaises de Loch Ard Gorge et descendez les Gibson Steps pour une vue imprenable sur les Apôtres depuis la plage.</li><li><strong>🚗 Retour vers Melbourne</strong>: Après une journée riche en paysages, reprenez la route intérieure (plus rapide) pour retourner à Melbourne.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Melbourne-australie-j42tq34bh8933b6/main/jour7.jpg" class="w-full h-64 object-cover" alt="Jour 7">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌅 Coucher de soleil</p>
+                                <p class="text-gray-700">Si le temps le permet, le coucher de soleil sur les Douze Apôtres est un spectacle inoubliable. Prévoyez d'y être en fin d'après-midi.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-8" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 8</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Journée relaxante et quartiers branchés de Melbourne</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après l'aventure de la Great Ocean Road, profitez d'une journée plus tranquille à Melbourne. Explorez les quartiers éclectiques de Fitzroy et Collingwood, connus pour leurs boutiques vintage, leurs galeries d'art et leurs cafés branchés. Une balade en tramway est idéale pour se déplacer en douceur.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚋 Balade en tramway dans le CBD</strong>: Profitez du tramway gratuit dans le centre-ville pour découvrir différents points de vue et vous déplacer facilement.</li><li><strong>🚶‍♀️ Exploration de Fitzroy et Collingwood</strong>: Flânez dans ces quartiers bohèmes, découvrez des boutiques indépendantes, des œuvres de street art et des cafés uniques.</li><li><strong>📚 Visite de la State Library Victoria</strong>: Admirez l'architecture impressionnante de cette bibliothèque historique et son dôme emblématique, un lieu paisible pour se détendre.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Melbourne-australie-j42tq34bh8933b6/main/jour8.jpg" class="w-full h-64 object-cover" alt="Jour 8">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎨 Art de rue</p>
+                                <p class="text-gray-700">Les ruelles de Fitzroy et Collingwood regorgent de fresques murales et de graffitis. C'est un véritable musée à ciel ouvert !</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-9" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 9</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Rencontre avec la faune de Phillip Island</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aventurez-vous sur Phillip Island pour une journée dédiée à la faune australienne. Observez les koalas dans leur habitat naturel et terminez la journée par le spectacle émouvant de la parade des petits pingouins au coucher du soleil.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚗 Route vers Phillip Island</strong>: Traversez le pont pour rejoindre cette île célèbre pour sa faune, à environ 1h30 de Melbourne.</li><li><strong>🐨 Koala Conservation Centre</strong>: Observez les koalas de près dans leur environnement naturel, perchés dans les eucalyptus.</li><li><strong>🐧 Penguin Parade</strong>: Assistez au spectacle unique des petits pingouins rentrant de la mer à la tombée de la nuit, un moment magique et inoubliable.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Melbourne-australie-j42tq34bh8933b6/main/jour9.jpg" class="w-full h-64 object-cover" alt="Jour 9">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Règles</p>
+                                <p class="text-gray-700">Il est strictement interdit de prendre des photos ou des vidéos des pingouins lors de la parade pour ne pas les effrayer. Profitez du moment !</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-10" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 10</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arcades historiques et musées captivants</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Pour votre avant-dernière journée, plongez dans l'élégance victorienne des arcades de Melbourne, véritables joyaux architecturaux. Ensuite, choisissez un musée pour approfondir un aspect de l'histoire ou de la culture australienne, avant de profiter d'une dernière soirée en ville.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🛍️ Exploration des arcades historiques</strong>: Flânez dans la Block Arcade et la Royal Arcade, des passages couverts magnifiques abritant des boutiques de luxe et des cafés.</li><li><strong>🏛️ Visite d'un musée au choix</strong>: Optez pour l'Immigration Museum pour comprendre l'histoire multiculturelle de l'Australie, ou l'Old Melbourne Gaol pour une plongée dans le passé carcéral.</li><li><strong>🍽️ Dîner d'adieu dans un restaurant de Melbourne</strong>: Savourez un dernier repas mémorable dans l'un des nombreux restaurants gastronomiques ou décontractés de la ville.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Melbourne-australie-j42tq34bh8933b6/main/jour10.jpg" class="w-full h-64 object-cover" alt="Jour 10">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎭 Spectacles</p>
+                                <p class="text-gray-700">Melbourne est une ville culturelle. Si vous êtes intéressé, vérifiez la programmation des théâtres pour une comédie musicale ou une pièce de théâtre.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-11" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 11</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Derniers instants et départ de Melbourne</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez de vos dernières heures à Melbourne pour quelques achats de souvenirs ou un dernier café. Il est temps de dire au revoir à cette ville fascinante et de prendre votre vol retour vers Sydney, la tête pleine de souvenirs relaxants et enrichissants.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>☕ Dernier petit-déjeuner australien</strong>: Savourez un dernier brunch ou un café dans un des nombreux établissements de Melbourne.</li><li><strong>🎁 Achats de souvenirs de dernière minute</strong>: Profitez des boutiques du centre-ville pour trouver des cadeaux ou des souvenirs de votre voyage.</li><li><strong>🛫 Départ de Melbourne</strong>: Transfert vers l'aéroport de Melbourne pour votre vol retour vers Sydney.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Melbourne-australie-j42tq34bh8933b6/main/jour11.jpg" class="w-full h-64 object-cover" alt="Jour 11">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🧳 Bagages</p>
+                                <p class="text-gray-700">Assurez-vous d'avoir suffisamment de temps pour le trajet vers l'aéroport et les formalités d'enregistrement, surtout si vous avez des souvenirs fragiles.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+    </section>
+
+    <section id="pratique" class="bg-white border-t border-gray-200 pt-12 pb-12 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget vol: </strong>A partir de 78 €/pers (A/R Sydney-Melbourne)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget transports: </strong>Environ 120 €/pers (Myki card, location voiture 3 jours, essence)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget repas: </strong>Environ 650 €/pers (60€/jour pour 11 jours)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget logement: </strong>Environ 1900 €/pers (170€/nuit pour 11 nuits, base 3* partagée)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget activités: </strong>Environ 250 €/pers (Hot Springs, Penguin Parade, dégustations, musées)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Automne (Mars-Mai)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Printemps (Septembre-Novembre)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Infos pratiques
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🍁 En avril, les températures à Melbourne varient entre 12 et 20°C. Prévoyez des couches de vêtements pour s'adapter aux changements rapides.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">💳 La monnaie est le Dollar Australien (AUD). Les cartes de crédit sont largement acceptées. Un peu de liquide peut être utile pour les petits marchés.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🚗 La conduite se fait à gauche. Un permis de conduire international est recommandé pour la location de voiture. Attention aux "Hook Turns" dans le CBD de Melbourne.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">📶 Une carte SIM locale (Telstra, Optus, Vodafone) ou une eSIM est conseillée pour la navigation et la communication. Le Wi-Fi est disponible dans la plupart des hébergements et cafés.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>🔗</span> Liens Utiles
+                </h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://mytripplanner-dotfr.github.io/Melbourne-australie-j42tq34bh8933b6/map.html" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🗺️ Carte Interactive</strong></a></li>
+                    
+                        <li><a href="https://www.kayak.fr/flights/SYD-MEL/2026-04-18/2026-04-29" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🛬 Réserve ton vol</strong></a></li>
+                    
+                        <li><a href="https://www.visitvictoria.com/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>📘 Visit Victoria</strong></a></li>
+                    
+                        <li><a href="https://www.ptv.vic.gov.au/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🚆 Public Transport Victoria (PTV)</strong></a></li>
+                    
+                        <li><a href="http://www.bom.gov.au/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🌤️ Bureau of Meteorology (BOM)</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 border-t border-slate-200 py-6">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="font-serif text-lg text-template-roche mb-2 font-bold">
+                MyTrip<span class="text-template-ocre">Planner</span>
+            </p>
+
+                <div class="flex justify-center gap-4 text-[10px] md:text-xs text-slate-500 mb-4 font-semibold">
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Mentions Légales</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">CGU</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Confidentialité</a>
+                </div>
+
+            <p class="text-[10px] text-gray-400 mb-2">
+                &copy; 2025 MyTripPlanner. Tous droits réservés.
+            </p>
+
+            <div class="flex justify-center">
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest px-2 py-0.5 border border-gray-200 rounded-full inline-block">
+                    🤖 Contenu généré par IA
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion Scroll & Menu
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+
+        // Active Link Highlighter
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -60% 0px' });
+
+        document.querySelectorAll('div[id^="jour-"], section#pratique').forEach(s => observer.observe(s));
+    </script>
+</body>
+</html>

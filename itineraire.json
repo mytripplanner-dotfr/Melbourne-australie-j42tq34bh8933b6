@@ -1,0 +1,468 @@
+{
+  "pays": "Australie",
+  "drapeau": "🇦🇺",
+  "symbole": "🐨",
+  "titre": "Escapade relaxante à Melbourne et ses environs",
+  "budget_total": "Environ 3000 €/personne",
+  "duree": "11 jours",
+  "date_debut": "2026-04-18",
+  "date_fin": "2026-04-29",
+  "temps_vol": "1h31 (depuis Sydney, Australie)",
+  "escale": "0",
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "🛬",
+      "titre": "Arrivée et premières impressions de Melbourne",
+      "legende": "Bienvenue à Melbourne ! Après votre vol depuis Sydney, installez-vous confortablement et imprégnez-vous de l'ambiance vibrante de la ville. Une balade le long de la Yarra River et autour de Federation Square est parfaite pour une première approche en douceur.",
+      "lieu": "Melbourne",
+      "activites": [
+        "<strong>🛬 Arrivée à Melbourne</strong>: Atterrissage à l'aéroport de Melbourne (MEL) et transfert vers votre hébergement au cœur de la ville.",
+        "<strong>🛏️ Installation à l'hôtel</strong>: Check-in et détente après le voyage. Prenez le temps de vous rafraîchir et de vous préparer pour explorer.",
+        "<strong>🚶‍♂️ Balade à Federation Square et Southbank</strong>: Découvrez l'architecture moderne de Federation Square et flânez le long de la promenade de Southbank, avec ses restaurants et vues sur la rivière Yarra."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Aéroport de Melbourne, Melbourne",
+          "categorie": "Aéroport",
+          "coords": { "lat": -37.6690, "lng": 144.8410 }
+        },
+        {
+          "nom_recherche": "Federation Square, Melbourne",
+          "categorie": "Place publique",
+          "coords": { "lat": -37.8179, "lng": 144.9686 }
+        },
+        {
+          "nom_recherche": "Southbank Promenade, Melbourne",
+          "categorie": "Promenade",
+          "coords": { "lat": -37.8200, "lng": 144.9640 }
+        }
+      ],
+      "illustration": "jour1.jpg",
+      "encarts": [
+        {
+          "symbole": "ℹ️",
+          "titre": "Transports",
+          "texte": "Le \"SkyBus\" est une option pratique et rapide pour rejoindre le centre-ville depuis l'aéroport de Melbourne."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": "🌳",
+      "titre": "Nature urbaine et trésors artistiques",
+      "legende": "Plongez dans la verdure luxuriante des jardins botaniques, puis laissez-vous émerveiller par les collections d'art de la National Gallery of Victoria. Terminez la journée en explorant les célèbres ruelles cachées de Melbourne.",
+      "lieu": "Melbourne",
+      "activites": [
+        "<strong>🌿 Royal Botanic Gardens Victoria</strong>: Profitez d'une promenade paisible dans ces magnifiques jardins, un havre de paix au cœur de la ville.",
+        "<strong>🎨 National Gallery of Victoria (NGV)</strong>: Explorez les vastes collections d'art australien et international dans le plus ancien musée d'art public d'Australie.",
+        "<strong>🚶‍♀️ Exploration des \"Laneways\"</strong>: Perdez-vous dans les célèbres ruelles de Melbourne, ornées de street art, de cafés cachés et de boutiques uniques."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Royal Botanic Gardens Victoria, Melbourne",
+          "categorie": "Jardin botanique",
+          "coords": { "lat": -37.8300, "lng": 144.9770 }
+        },
+        {
+          "nom_recherche": "National Gallery of Victoria, Melbourne",
+          "categorie": "Musée d'art",
+          "coords": { "lat": -37.8226, "lng": 144.9692 }
+        },
+        {
+          "nom_recherche": "Hosier Lane, Melbourne",
+          "categorie": "Street art",
+          "coords": { "lat": -37.8179, "lng": 144.9692 }
+        }
+      ],
+      "illustration": "jour2.jpg",
+      "encarts": [
+        {
+          "symbole": "☕",
+          "titre": "Pause Café",
+          "texte": "Melbourne est réputée pour sa culture du café. N'hésitez pas à vous arrêter dans l'un des nombreux cafés des laneways pour une expérience authentique."
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "🛍️",
+      "titre": "Marché vibrant et brise marine à St Kilda",
+      "legende": "Débutez votre journée par l'effervescence du Queen Victoria Market, où saveurs et découvertes vous attendent. L'après-midi, cap sur la plage de St Kilda pour une ambiance balnéaire relaxante et une vue imprenable sur la baie.",
+      "lieu": "Melbourne",
+      "activites": [
+        "<strong>🛒 Queen Victoria Market</strong>: Imprégnez-vous de l'ambiance de ce marché historique, le plus grand de l'hémisphère sud, et dégustez des produits locaux.",
+        "<strong>🏖️ Détente à St Kilda Beach</strong>: Profitez du soleil sur la plage, promenez-vous le long de la jetée et admirez les vues sur la ville.",
+        "<strong>🎡 Luna Park Melbourne</strong>: Amusez-vous devant la façade emblématique de ce parc d'attractions historique, ou osez quelques manèges pour les plus aventureux."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Queen Victoria Market, Melbourne",
+          "categorie": "Marché",
+          "coords": { "lat": -37.8073, "lng": 144.9567 }
+        },
+        {
+          "nom_recherche": "St Kilda Beach, Melbourne",
+          "categorie": "Plage",
+          "coords": { "lat": -37.8670, "lng": 144.9750 }
+        },
+        {
+          "nom_recherche": "Luna Park Melbourne, St Kilda",
+          "categorie": "Parc d'attractions",
+          "coords": { "lat": -37.8675, "lng": 144.9760 }
+        }
+      ],
+      "illustration": "jour3.jpg",
+      "encarts": [
+        {
+          "symbole": "🐧",
+          "titre": "Petits pingouins",
+          "texte": "Au coucher du soleil, il est parfois possible d'apercevoir de petits pingouins revenir à terre sous la jetée de St Kilda. Soyez patient et discret !"
+        }
+      ]
+    },
+    {
+      "jour": 4,
+      "symbole": "🍇",
+      "titre": "Évasion gourmande dans la Yarra Valley",
+      "legende": "Laissez la ville derrière vous pour une journée de détente et de délices dans la pittoresque Yarra Valley. Cette région viticole réputée offre des paysages vallonnés, des dégustations de vins raffinés et des produits locaux savoureux.",
+      "lieu": "Yarra Valley",
+      "activites": [
+        "<strong>🚗 Route panoramique vers la Yarra Valley</strong>: Profitez des paysages verdoyants en direction de cette célèbre région viticole, à environ une heure de Melbourne.",
+        "<strong>🍷 Dégustation de vins dans un domaine</strong>: Visitez un vignoble comme Domaine Chandon ou De Bortoli pour une dégustation de vins locaux dans un cadre magnifique.",
+        "<strong>🧀 Visite d'une fromagerie locale</strong>: Découvrez les saveurs régionales en visitant une fromagerie ou une chocolaterie, pour une pause gourmande."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Yarra Valley, Victoria",
+          "categorie": "Région viticole",
+          "coords": { "lat": -37.6900, "lng": 145.3800 }
+        },
+        {
+          "nom_recherche": "Domaine Chandon, Coldstream",
+          "categorie": "Vignoble",
+          "coords": { "lat": -37.6960, "lng": 145.4290 }
+        },
+        {
+          "nom_recherche": "Yarra Valley Dairy, Yarra Glen",
+          "categorie": "Fromagerie",
+          "coords": { "lat": -37.6590, "lng": 145.3700 }
+        }
+      ],
+      "illustration": "jour4.jpg",
+      "encarts": [
+        {
+          "symbole": "💡",
+          "titre": "Conseil",
+          "texte": "Pensez à désigner un conducteur sobre ou à opter pour une visite guidée avec transport inclus pour profiter pleinement des dégustations."
+        }
+      ]
+    },
+    {
+      "jour": 5,
+      "symbole": "♨️",
+      "titre": "Détente aux sources chaudes de Mornington Peninsula",
+      "legende": "Aujourd'hui, place à la relaxation ultime ! Dirigez-vous vers la magnifique Mornington Peninsula pour une journée dédiée au bien-être. Les célèbres Peninsula Hot Springs vous offriront une expérience de détente inoubliable au milieu de paysages naturels.",
+      "lieu": "Mornington Peninsula",
+      "activites": [
+        "<strong>🚗 Route vers Mornington Peninsula</strong>: Profitez d'une belle route côtière vers cette péninsule réputée pour ses plages et ses sources thermales.",
+        "<strong>♨️ Bains aux Peninsula Hot Springs</strong>: Plongez dans les piscines géothermiques naturelles, offrant une relaxation profonde et des vues panoramiques.",
+        "<strong>🚶‍♂️ Balade côtière à Sorrento ou Portsea</strong>: Explorez les charmantes villes côtières de la péninsule, avec leurs boutiques et leurs plages paisibles."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Peninsula Hot Springs, Fingal",
+          "categorie": "Sources chaudes",
+          "coords": { "lat": -38.4060, "lng": 144.8600 }
+        },
+        {
+          "nom_recherche": "Sorrento, Victoria",
+          "categorie": "Ville côtière",
+          "coords": { "lat": -38.3400, "lng": 144.7300 }
+        },
+        {
+          "nom_recherche": "Arthurs Seat Eagle, Dromana",
+          "categorie": "Télécabine",
+          "coords": { "lat": -38.3400, "lng": 144.9300 }
+        }
+      ],
+      "illustration": "jour5.jpg",
+      "encarts": [
+        {
+          "symbole": "🧖‍♀️",
+          "titre": "Préparation",
+          "texte": "Pensez à réserver vos créneaux aux Peninsula Hot Springs à l'avance, surtout si vous voyagez pendant les week-ends ou les vacances."
+        }
+      ]
+    },
+    {
+      "jour": 6,
+      "symbole": "🌊",
+      "titre": "Début de la Great Ocean Road : Plages et forêts",
+      "legende": "Embarquez pour l'une des routes côtières les plus spectaculaires du monde, la Great Ocean Road. Aujourd'hui, vous découvrirez les premières merveilles : des plages de surf emblématiques aux charmantes villes côtières, en passant par des forêts d'eucalyptus apaisantes. Nuit à Apollo Bay.",
+      "lieu": "Great Ocean Road",
+      "activites": [
+        "<strong>🚗 Départ pour la Great Ocean Road</strong>: Commencez votre périple le long de cette route légendaire, en faisant des arrêts à Torquay et Bells Beach.",
+        "<strong>🚶‍♂️ Balade à Lorne</strong>: Profitez d'une pause dans la jolie ville de Lorne, avec sa plage et ses cafés. Possibilité d'une courte marche vers les Erskine Falls.",
+        "<strong>🌲 Forêts d'eucalyptus et arrivée à Apollo Bay</strong>: Traversez des sections de forêt luxuriante avant d'atteindre Apollo Bay, où vous passerez la nuit."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Torquay, Victoria",
+          "categorie": "Ville côtière",
+          "coords": { "lat": -38.3300, "lng": 144.3200 }
+        },
+        {
+          "nom_recherche": "Bells Beach, Torquay",
+          "categorie": "Plage de surf",
+          "coords": { "lat": -38.3700, "lng": 144.2900 }
+        },
+        {
+          "nom_recherche": "Apollo Bay, Victoria",
+          "categorie": "Ville côtière",
+          "coords": { "lat": -38.7500, "lng": 143.6600 }
+        }
+      ],
+      "illustration": "jour6.jpg",
+      "encarts": [
+        {
+          "symbole": "🐨",
+          "titre": "Faune",
+          "texte": "Gardez l'œil ouvert le long de la route, surtout dans les zones boisées, vous pourriez apercevoir des koalas dans les eucalyptus !"
+        }
+      ]
+    },
+    {
+      "jour": 7,
+      "symbole": "🗿",
+      "titre": "Les icônes de la Great Ocean Road et retour",
+      "legende": "Poursuivez votre exploration de la Great Ocean Road pour admirer ses formations rocheuses emblématiques, dont les majestueux Douze Apôtres. Après avoir capturé des souvenirs inoubliables, reprenez la route vers Melbourne pour une soirée plus calme.",
+      "lieu": "Great Ocean Road / Melbourne",
+      "activites": [
+        "<strong>🗿 Les Douze Apôtres</strong>: Admirez ces piliers de calcaire spectaculaires émergeant de l'océan, un site incontournable de la Great Ocean Road.",
+        "<strong>🚶‍♀️ Loch Ard Gorge et Gibson Steps</strong>: Explorez les plages et les falaises de Loch Ard Gorge et descendez les Gibson Steps pour une vue imprenable sur les Apôtres depuis la plage.",
+        "<strong>🚗 Retour vers Melbourne</strong>: Après une journée riche en paysages, reprenez la route intérieure (plus rapide) pour retourner à Melbourne."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Twelve Apostles, Princetown",
+          "categorie": "Formation rocheuse",
+          "coords": { "lat": -37.8100, "lng": 144.9600 }
+        },
+        {
+          "nom_recherche": "Loch Ard Gorge, Port Campbell",
+          "categorie": "Gorge",
+          "coords": { "lat": -38.6500, "lng": 143.0800 }
+        },
+        {
+          "nom_recherche": "Gibson Steps, Princetown",
+          "categorie": "Escalier côtier",
+          "coords": { "lat": -38.6600, "lng": 143.1000 }
+        }
+      ],
+      "illustration": "jour7.jpg",
+      "encarts": [
+        {
+          "symbole": "🌅",
+          "titre": "Coucher de soleil",
+          "texte": "Si le temps le permet, le coucher de soleil sur les Douze Apôtres est un spectacle inoubliable. Prévoyez d'y être en fin d'après-midi."
+        }
+      ]
+    },
+    {
+      "jour": 8,
+      "symbole": "🚋",
+      "titre": "Journée relaxante et quartiers branchés de Melbourne",
+      "legende": "Après l'aventure de la Great Ocean Road, profitez d'une journée plus tranquille à Melbourne. Explorez les quartiers éclectiques de Fitzroy et Collingwood, connus pour leurs boutiques vintage, leurs galeries d'art et leurs cafés branchés. Une balade en tramway est idéale pour se déplacer en douceur.",
+      "lieu": "Melbourne",
+      "activites": [
+        "<strong>🚋 Balade en tramway dans le CBD</strong>: Profitez du tramway gratuit dans le centre-ville pour découvrir différents points de vue et vous déplacer facilement.",
+        "<strong>🚶‍♀️ Exploration de Fitzroy et Collingwood</strong>: Flânez dans ces quartiers bohèmes, découvrez des boutiques indépendantes, des œuvres de street art et des cafés uniques.",
+        "<strong>📚 Visite de la State Library Victoria</strong>: Admirez l'architecture impressionnante de cette bibliothèque historique et son dôme emblématique, un lieu paisible pour se détendre."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Fitzroy, Melbourne",
+          "categorie": "Quartier",
+          "coords": { "lat": -37.8000, "lng": 144.9800 }
+        },
+        {
+          "nom_recherche": "Collingwood, Melbourne",
+          "categorie": "Quartier",
+          "coords": { "lat": -37.8000, "lng": 145.0000 }
+        },
+        {
+          "nom_recherche": "State Library Victoria, Melbourne",
+          "categorie": "Bibliothèque",
+          "coords": { "lat": -37.8095, "lng": 144.9629 }
+        }
+      ],
+      "illustration": "jour8.jpg",
+      "encarts": [
+        {
+          "symbole": "🎨",
+          "titre": "Art de rue",
+          "texte": "Les ruelles de Fitzroy et Collingwood regorgent de fresques murales et de graffitis. C'est un véritable musée à ciel ouvert !"
+        }
+      ]
+    },
+    {
+      "jour": 9,
+      "symbole": "🐧",
+      "titre": "Rencontre avec la faune de Phillip Island",
+      "legende": "Aventurez-vous sur Phillip Island pour une journée dédiée à la faune australienne. Observez les koalas dans leur habitat naturel et terminez la journée par le spectacle émouvant de la parade des petits pingouins au coucher du soleil.",
+      "lieu": "Phillip Island",
+      "activites": [
+        "<strong>🚗 Route vers Phillip Island</strong>: Traversez le pont pour rejoindre cette île célèbre pour sa faune, à environ 1h30 de Melbourne.",
+        "<strong>🐨 Koala Conservation Centre</strong>: Observez les koalas de près dans leur environnement naturel, perchés dans les eucalyptus.",
+        "<strong>🐧 Penguin Parade</strong>: Assistez au spectacle unique des petits pingouins rentrant de la mer à la tombée de la nuit, un moment magique et inoubliable."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Phillip Island, Victoria",
+          "categorie": "Île",
+          "coords": { "lat": -38.5000, "lng": 145.2000 }
+        },
+        {
+          "nom_recherche": "Koala Conservation Centre, Phillip Island",
+          "categorie": "Centre de conservation",
+          "coords": { "lat": -38.5060, "lng": 145.2300 }
+        },
+        {
+          "nom_recherche": "Penguin Parade, Phillip Island",
+          "categorie": "Parc naturel",
+          "coords": { "lat": -38.5100, "lng": 145.1300 }
+        }
+      ],
+      "illustration": "jour9.jpg",
+      "encarts": [
+        {
+          "symbole": "📸",
+          "titre": "Règles",
+          "texte": "Il est strictement interdit de prendre des photos ou des vidéos des pingouins lors de la parade pour ne pas les effrayer. Profitez du moment !"
+        }
+      ]
+    },
+    {
+      "jour": 10,
+      "symbole": "🏛️",
+      "titre": "Arcades historiques et musées captivants",
+      "legende": "Pour votre avant-dernière journée, plongez dans l'élégance victorienne des arcades de Melbourne, véritables joyaux architecturaux. Ensuite, choisissez un musée pour approfondir un aspect de l'histoire ou de la culture australienne, avant de profiter d'une dernière soirée en ville.",
+      "lieu": "Melbourne",
+      "activites": [
+        "<strong>🛍️ Exploration des arcades historiques</strong>: Flânez dans la Block Arcade et la Royal Arcade, des passages couverts magnifiques abritant des boutiques de luxe et des cafés.",
+        "<strong>🏛️ Visite d'un musée au choix</strong>: Optez pour l'Immigration Museum pour comprendre l'histoire multiculturelle de l'Australie, ou l'Old Melbourne Gaol pour une plongée dans le passé carcéral.",
+        "<strong>🍽️ Dîner d'adieu dans un restaurant de Melbourne</strong>: Savourez un dernier repas mémorable dans l'un des nombreux restaurants gastronomiques ou décontractés de la ville."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Block Arcade, Melbourne",
+          "categorie": "Galerie marchande",
+          "coords": { "lat": -37.8157, "lng": 144.9645 }
+        },
+        {
+          "nom_recherche": "Royal Arcade, Melbourne",
+          "categorie": "Galerie marchande",
+          "coords": { "lat": -37.8140, "lng": 144.9630 }
+        },
+        {
+          "nom_recherche": "Immigration Museum, Melbourne",
+          "categorie": "Musée",
+          "coords": { "lat": -37.8190, "lng": 144.9600 }
+        },
+        {
+          "nom_recherche": "Old Melbourne Gaol, Melbourne",
+          "categorie": "Ancienne prison",
+          "coords": { "lat": -37.8070, "lng": 144.9630 }
+        }
+      ],
+      "illustration": "jour10.jpg",
+      "encarts": [
+        {
+          "symbole": "🎭",
+          "titre": "Spectacles",
+          "texte": "Melbourne est une ville culturelle. Si vous êtes intéressé, vérifiez la programmation des théâtres pour une comédie musicale ou une pièce de théâtre."
+        }
+      ]
+    },
+    {
+      "jour": 11,
+      "symbole": "🛫",
+      "titre": "Derniers instants et départ de Melbourne",
+      "legende": "Profitez de vos dernières heures à Melbourne pour quelques achats de souvenirs ou un dernier café. Il est temps de dire au revoir à cette ville fascinante et de prendre votre vol retour vers Sydney, la tête pleine de souvenirs relaxants et enrichissants.",
+      "lieu": "Melbourne",
+      "activites": [
+        "<strong>☕ Dernier petit-déjeuner australien</strong>: Savourez un dernier brunch ou un café dans un des nombreux établissements de Melbourne.",
+        "<strong>🎁 Achats de souvenirs de dernière minute</strong>: Profitez des boutiques du centre-ville pour trouver des cadeaux ou des souvenirs de votre voyage.",
+        "<strong>🛫 Départ de Melbourne</strong>: Transfert vers l'aéroport de Melbourne pour votre vol retour vers Sydney."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Aéroport de Melbourne, Melbourne",
+          "categorie": "Aéroport",
+          "coords": { "lat": -37.6690, "lng": 144.8410 }
+        }
+      ],
+      "illustration": "jour11.jpg",
+      "encarts": [
+        {
+          "symbole": "🧳",
+          "titre": "Bagages",
+          "texte": "Assurez-vous d'avoir suffisamment de temps pour le trajet vers l'aéroport et les formalités d'enregistrement, surtout si vous avez des souvenirs fragiles."
+        }
+      ]
+    }
+  ],
+  "detail_budget": [
+    { "titre": "Budget vol:", "legende": "A partir de 78 €/pers (A/R Sydney-Melbourne)", "symbole": "🛬" },
+    { "titre": "Budget transports:", "legende": "Environ 120 €/pers (Myki card, location voiture 3 jours, essence)", "symbole": "🚆" },
+    { "titre": "Budget repas:", "legende": "Environ 650 €/pers (60€/jour pour 11 jours)", "symbole": "🥗" },
+    { "titre": "Budget logement:", "legende": "Environ 1900 €/pers (170€/nuit pour 11 nuits, base 3* partagée)", "symbole": "🛏️" },
+    { "titre": "Budget activités:", "legende": "Environ 250 €/pers (Hot Springs, Penguin Parade, dégustations, musées)", "symbole": "🎭" }
+  ],
+  "periodes_ideales": [
+    { "titre": "Automne (Mars-Mai)", "symbole": "🍂" },
+    { "titre": "Printemps (Septembre-Novembre)", "symbole": "🌸" }
+  ],
+  "infos_pratiques": [
+    { "titre": "En avril, les températures à Melbourne varient entre 12 et 20°C. Prévoyez des couches de vêtements pour s'adapter aux changements rapides.", "symbole": "🍁" },
+    { "titre": "La monnaie est le Dollar Australien (AUD). Les cartes de crédit sont largement acceptées. Un peu de liquide peut être utile pour les petits marchés.", "symbole": "💳" },
+    { "titre": "La conduite se fait à gauche. Un permis de conduire international est recommandé pour la location de voiture. Attention aux \"Hook Turns\" dans le CBD de Melbourne.", "symbole": "🚗" },
+    { "titre": "Une carte SIM locale (Telstra, Optus, Vodafone) ou une eSIM est conseillée pour la navigation et la communication. Le Wi-Fi est disponible dans la plupart des hébergements et cafés.", "symbole": "📶" }
+  ],
+  "infos_decallees": [
+    {
+      "symbole": "💡",
+      "titre": "Le saviez-vous ?",
+      "texte": "Melbourne est réputée pour son climat \"quatre saisons en une journée\". Préparez-vous à tout, du soleil éclatant à la pluie fine, parfois en l'espace d'une heure !"
+    },
+    {
+      "symbole": "🙃",
+      "titre": "Insolite",
+      "texte": "Dans le centre de Melbourne, certains carrefours exigent un \"Hook Turn\" pour tourner à droite. C'est une manœuvre unique où l'on se positionne à gauche pour laisser passer le trafic avant de tourner. Déroutant mais efficace !"
+    }
+  ],
+  "specialites_culinaires": [
+    {
+      "symbole": "🍴",
+      "titre": "Flat White",
+      "description": "Le café est une institution à Melbourne. Le Flat White, avec son velouté de lait, est un incontournable pour démarrer la journée ou pour une pause gourmande."
+    },
+    {
+      "symbole": "🥧",
+      "titre": "Meat Pie",
+      "description": "Cette tourte à la viande est le snack national australien par excellence. Parfaite pour un déjeuner rapide et savoureux, souvent accompagnée de sauce tomate."
+    },
+    {
+      "symbole": "🍰",
+      "titre": "Lamington",
+      "description": "Un carré de génoise enrobé de chocolat et de noix de coco râpée, le Lamington est une douceur emblématique à déguster avec un thé ou un café."
+    }
+  ],
+  "liens_utiles": [
+    { "legende": "Vols", "titre": "Réserve ton vol", "url": "https://www.kayak.fr/flights/SYD-MEL/2026-04-18/2026-04-29", "symbole": "🛬" },
+    { "legende": "Infos officielles et inspirations", "titre": "Visit Victoria", "url": "https://www.visitvictoria.com/", "symbole": "📘" },
+    { "legende": "Transports en commun Melbourne", "titre": "Public Transport Victoria (PTV)", "url": "https://www.ptv.vic.gov.au/", "symbole": "🚆" },
+    { "legende": "Météo", "titre": "Bureau of Meteorology (BOM)", "url": "http://www.bom.gov.au/", "symbole": "🌤️" }
+  ]
+}
